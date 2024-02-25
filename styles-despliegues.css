@@ -1,0 +1,509 @@
+ 
+ /* desde google */
+
+ body{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100px;
+  font-style: normal;
+ }
+ 
+ 
+ header{
+    background-color: #BBBBBB;
+    /*Espaciamiento interno paddin*/
+    padding: 20px;
+ }
+
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+
+ nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+ }
+
+ nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 25px;
+/*text-decoration para el subrayado del link*/    
+    text-decoration: none;
+ }
+
+/* para capturar movimiento del mouse en el nav*/
+
+nav a:hover{
+   color: #c78c19;
+
+   /*text-decoration para el subrayado del link*/
+   text-decoration: underline;
+}
+
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+/*Selector de los productos de barba y precios*/
+ .productos li{
+   /* agrega en linea los bloques*/
+    display:inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+/*bacjkgroun me muestra los bloques y tamaños */
+   /* background: #CCCCCC;*/
+    /* 0 en vertical 1.5 en laterales*/
+    margin: 0 1.5%;
+    /* Margen externo 30 vertical 20 horizontal  */
+    padding: 30px 20px;
+    /* border el padding lo va ajustar segun los espacios en productos 940 y padding 20px*/
+    box-sizing: border-box;
+
+ /* agregando el borde*/
+   border:2px solid #000000; 
+ /* paso a paso  
+   border-color: #000000;
+   border-width: 2px;
+   border-style: solid;*/
+
+   /*Modificar borde superior ancho*/
+   /*border-top-width: 10px;*/
+
+   /* Borde redondeado*/
+   /* border-radius: 10px 10px 10px 10px;*/
+   border-radius: 10px;
+
+ }
+
+/* para capturar movimiento del mouse en los productos*/
+ .productos li:hover{
+   border-color: #c78c19;
+   color: #c78c19;
+
+ }
+
+ /* para capturar el clic*/
+
+ .productos li:active{
+   border-color: #088c19;
+ }
+
+ .productos h2{
+    font-size: 30px;
+    font-weight: bold;
+ }
+
+/*para agrandar las letras con el over, se puso aca por que producto h2 esta antes y 
+los estilos los toma del anterior selector*/
+
+ .productos li:hover h2{
+   font-size: 33px;
+ }
+
+ .producto-descripcion{
+    font-size: 18px;
+    
+ }
+
+ .producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+ }
+
+ footer{
+   /*ajustar alineamiento del texto al centro*/
+   text-align: center;
+   /*background: #000000;*/
+   background: url(imagenes/bg.jpg);
+   /* agregar padding espaciamiento interno en el footer*/
+   padding: 40px;
+   
+
+ }
+
+
+ .copy{
+
+   /*cambiando color del texto*/
+   color:#ffffff;
+   /*cambiando tamaño del texto*/
+   font-size: 10px;
+   /* verificar unicode-table.com para el caracter copyrigth u otros*/
+   /*margen entre logo y la imagen*/
+   margin:20px;
+ }
+
+
+
+ /* estilos de los formularios*/
+
+ main{
+
+
+ }
+
+
+form{
+   /*Margen 40 arriba y abajo y 0 costados*/
+   margin: 40px 0;
+}
+
+ form label, form legend{
+      /*propiedad display, hay elementos que vienen por defaul "
+   Display-block: Ocupan 100% de la pagina
+   Display-inline: Ocupan el espacio de su contenido en la pagina*/
+   display: block;
+   /*tamaño de la letra*/
+   font-size: 20px;
+   /*Margen 0 arriba y 0 derecha y 10 abajo*/
+   margin: 0 0 10px;
+
+ }
+
+ /* puedo agregar los stilos anteriores a mas cosas agregando la etiqueta separado de coma:*/
+ /*form input, form textarea{*/
+ .input-padron{  
+   display: block;
+   /*tamaño de la letra*/
+   font-size: 20px;
+   /*Margen 0 arriba y 0 derecha y 10 abajo*/
+   margin: 0 0 10px;
+   /*paddin espaciamiento interno*/
+   /* 10px super e inferior 25px para los lados*/
+   padding: 10px 25px;
+   /*ancho de nuestro inputs, ocupen 50% delos 940px definidos arriba*/
+   width: 50%;
+}
+
+.checkbox{
+   margin: 20px 0;
+}
+
+/*jerarquia del css*/
+/*pesos
+id 100
+clase 10
+etiqueta como <form> como <p> tienen 1
+
+*/
+
+
+/* p{
+   color:red;
+}
+
+form p{
+   color: blue;
+}
+
+ */
+
+
+ .enviar{
+   /*40 porciento de la pagina disponible*/
+   width:40% ;
+   /*padding espaciamiento interno 15 arriba abajo y 0 laterales*/
+   padding: 15px 0;
+   /*cambiando la letra*/
+   font-size: 18px;
+   font-weight: bold;
+   color:white;
+   background: orange;
+   /*quitar borde del boton y las puntas*/
+   border: none;
+   border-radius: 5px;
+   /*trasicion para cambiar el color en el background y en all*/
+   transition: 1s all;
+   /*Cambiar el cursor en el boton*/
+   cursor:pointer;
+
+ }
+
+ .enviar:hover{
+   background: darkorange;
+   /*aumentar el tamaño del boton*/
+   transform: scale(1.2);
+   /*tambien puedo rotar*/
+   transform: rotate(70deg);
+   /*si quiero las 2 al tiempo deben estar en la misma linea*/
+   transform: scale(1.2) rotate(70deg);
+
+ }
+
+
+ table{
+   margin: 40px 40px;
+ }
+
+ /*estilos encabezado de la tabla*/
+ thead{
+   background: #555555;
+   color: white;
+   font-weight: bold;
+ }
+
+ td, th{
+   border:1px solid #000000;
+   padding: 8px 15px;
+ }
+
+
+ /* CSS para el HOME */
+
+.banner{
+  /*poner el banner imagen principal 100%*/
+  width: 100%;
+}
+
+/*SELECTORES AVANZADOS*/
+
+/*Solo aplica a los hijos del main no a los que estan mas adentro con mas etiquetas*/
+/* main > p{
+  background: red;
+}
+ */
+
+/*El primer parrafo que esta despues de la imagen*/
+/* img + p {
+  background: blue;
+} */
+
+/*A todos los parrafos que vienen despues de la imagen  */
+
+/* img ~ p {
+  background: blue;
+} */
+
+
+/* .principal p:not(#Mision){
+  background: orange; 
+}
+ */
+
+.principal{
+  /*espacimiento interno*/
+  padding: 3em 0;
+  background: #ffffff ;
+
+     /*centrando el main partiendo que es una patnatlla 1270*/
+     width: 940px;
+     /*Magen 0 arriba y abajo y auto en los lados*/
+     margin: 0% auto;
+}
+
+ .titulo-principal{
+/*centrar el titulo*/
+  text-align: center;
+  /*2 veces el tamaño que tiene el navegador*/
+  font-size: 2em;
+  /*margen externo 0 arriba 0 derecha 1em abajo*/
+  margin: 0 0 2em;
+
+  /*esta imagen solo aplica para el bloque la de utensilios*/
+  clear:left;
+  /*opacidad con rgba en el cuarto parametro*/
+  color: rgba(0, 0, 0, 0.075);
+
+  /*sombrado al texto*/
+/*   text-shadow: 2px 2px 10px red; */
+
+
+ }
+
+
+/*SEUDOELEMENTOS*/
+ .titulo-principal::first-letter{
+  /*primera letra pintada*/
+  font-weight: bold;
+ }
+
+/* 
+p::first-line{
+  font-style: italic;
+}
+
+.titulo-principal:before{
+  content: "[";
+}
+
+.titulo-principal:after{
+  content: "]";
+} */
+
+
+
+ .principal p{
+  /*margen externo 0 arriba 0 derecha 1em abajo*/
+  margin: 0 0 1em;
+
+ }
+
+
+
+ .principal strong{
+
+  font-weight: bold;
+ }
+
+
+ /*Cambiando em a italico*/
+ .principal em{
+  font-style: italic;
+ }
+
+
+
+ .utensilios{
+
+    width: 120px;
+
+    /* para redondear el texto en la imagen*/
+    float: left;
+    /* 0 arriba 20 derecha 20 abajo 0 izquierda, margen interno */
+    margin: 0 20px 20px 0;
+
+   
+ }
+
+
+ .mapa{
+/* 3em= veces el tamaño de la fuente */
+  padding: 3em 0;
+/*Degradado*/
+/*background: linear-gradient(45deg,orange 80%, blue);
+background: radial-gradient(orange 80%, blue);*/
+background: linear-gradient(#FEFEFE,#888888);
+
+
+ }
+
+
+ .mapa p{
+   margin: 0 0 2em;
+   text-align: center;
+ }
+
+ .mapa-contenido{
+     /*centrando el main partiendo que es una patnatlla 1270*/
+     width: 940px;
+     /*Magen 0 arriba y abajo y auto en los lados*/
+     margin: 0% auto;
+ }
+
+ .diferenciales{
+
+  padding: 3em 0;
+  background: #888888;
+
+  /*Sombra interna*/
+
+  /* box-shadow: inset 0 0 30px red; */
+
+ }
+
+
+.contenido-diferenciales{
+  /*aca el 60% de los 900 pixeles*/
+  width: 640px;
+  margin: 0 auto;
+
+}
+
+
+.lista-diferenciales{
+
+  /*anchura al 40% de la imagen que ocupa el 60% de los 640 px de ese grupo*/
+  width:40%;
+  /*quitando la propiedad de usar el total del espacio*/
+  display:inline-block;
+  
+}
+
+
+.items{
+  /*agrando 50% de nuestra fuente en la lista*/
+  line-height: 1.5;
+}
+
+
+.items:before{
+  content: "★";
+}
+
+.items:first-child{
+  /*Fondo de la letra*/
+  font-weight: bold;  
+}
+
+ .imagen-diferenciales{
+
+  width: 60%;
+
+  /*sombra derecha arriba up  degradado,spreed cuantos pixeles, si coloco negativo la smbra se invierte*/
+  box-shadow:10px 10px 30px 15px #000000 ;
+
+  /* box-shadow:10px 10px 30px 15px #000000,-10px -10px 30px 15px #000000  ; */
+
+ }
+
+/*opacidad cuando el mouse pasa encima*/
+ .imagen-diferenciales:hover{
+
+  opacity: 0.3;
+  transition: 400ms;
+
+ }
+
+
+.video{
+  
+  width: 560px;
+  /*centralizarlo con margin 1em la letra padron*/
+  margin: 1em auto;
+}
+
+
+/*responsive para mobile*/
+@media screen  and (max-width:480px){
+
+
+/* centralizando la imagen */  
+.h1{
+  text-align: center;
+}
+
+/* comstrando el menu, cambianod de dinamic a estatico */
+nav{
+  position: static;
+}
+
+  .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video{
+
+    width: auto;
+  }
+
+/* la lista y la imagen ocupan el 100% para mobile */
+
+.lista-diferenciales, .imagen-diferenciales{
+
+    width: 100%;
+}
+
+  
+}
